@@ -14,7 +14,6 @@
 header{
     background-color: var(--boolando-orange);
     color: aliceblue;
-    margin-bottom: 4rem;
 }
 
 .navbar{
@@ -40,6 +39,11 @@ header{
     height: 2rem;
 }
 
+.icon>img{
+    height: 1rem;
+    filter: invert(100%)
+}
+
 main{
     display: flex;
     flex-direction: column;
@@ -49,10 +53,14 @@ main{
 .container{
     align-self: center;
     width: 70%;
+    min-width: 360px;
 }
 
 .row{
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 3rem 0;
 }
 
 .col-3{
@@ -71,6 +79,7 @@ main{
 
 .product-image>img{
     width: 100%;
+    user-select: none;
 }
 
 .favourite-popup,
@@ -85,6 +94,16 @@ main{
     top: 2%;
     background-color: white;
     padding: 2.5% 5%;
+    user-select: none;
+    visibility: hidden;
+}
+
+.product-image:hover>.favourite-popup{
+    visibility: visible;
+}
+
+.favourite-popup:hover{
+    color: #ff0000;
 }
 
 .discount-percent{
@@ -94,6 +113,7 @@ main{
     color: white;
     background-color: var(--boolando-red);
     margin-right: 0.5rem;
+    user-select: none;
 }
 
 .sostenibilità{
@@ -104,10 +124,16 @@ main{
     color: white;
     background-color: var(--boolando-green);
     margin-right: 0.5rem;
+    user-select: none;
 }
 
-.price{
-    
+.sostenibilità.sinistra{
+    left: 10px;
+}
+
+.price,
+.brand{
+    font-size: small;
 }
 
 .discounted-price{
@@ -118,4 +144,56 @@ main{
 .discounted-price + .regular-price{
     text-decoration: line-through;
 
+}
+
+.invisible{
+    display: none;
+}
+
+footer{
+    background-color: var(--boolando-dark);
+    color: white;
+
+    display: flex;
+    justify-content: center;
+
+}
+
+.container{
+    display: flex;
+    width: 70%;
+    justify-content: space-between;
+}
+
+.company-information{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+
+.legal-documents{
+    margin-top: 0.5rem;
+}
+
+.legal-documents>a{
+    color: white;
+    text-decoration: none;
+    margin-right:0.3rem;
+    font-size: small;
+}
+
+.social{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+.social-list{
+    display: flex;
+    justify-content: space-between;
+}
+
+footer>.container{
+    height: 5rem;
 }
