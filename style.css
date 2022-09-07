@@ -57,6 +57,9 @@ main{
 
 .col-3{
     width: calc(100% /3);
+    min-width: 180px;
+    position: relative;
+
 }
 
 .product-image,
@@ -74,4 +77,45 @@ main{
 .discount-percent,
 .sostenibilità{
     position: absolute;
+}
+
+.favourite-popup{
+    font-size:x-large;
+    right: 2%;
+    top: 2%;
+    background-color: white;
+    padding: 2.5% 5%;
+}
+
+.discount-percent{
+    font-size:small;
+    bottom: 7rem;
+    padding: 0.2rem 0.5rem;
+    color: white;
+    background-color: var(--boolando-red);
+    margin-right: 0.5rem;
+}
+
+.sostenibilità{
+    font-size:small;
+    bottom: 7rem;
+    left: 3.5rem;
+    padding: 0.2rem 0.5rem;
+    color: white;
+    background-color: var(--boolando-green);
+    margin-right: 0.5rem;
+}
+
+.price{
+    
+}
+
+.discounted-price{
+    color: var(--boolando-red);
+    font-weight: 700;
+}
+
+.discounted-price + .regular-price{
+    text-decoration: line-through;
+
 }
