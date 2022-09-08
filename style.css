@@ -67,7 +67,6 @@ main{
     width: calc(100% /3);
     min-width: 180px;
     position: relative;
-
 }
 
 .product-image,
@@ -77,10 +76,33 @@ main{
     margin: 0 0.5rem;
 }
 
+.product-name{
+    text-transform:uppercase;
+}
+
 .product-image>img{
     width: 100%;
     user-select: none;
 }
+
+.product-image:not(:hover)>.standard-image{
+    display: none;
+}
+
+.product-image:hover>.alternative-image{
+    display: none;
+}
+
+/*
+.standard-image:not(:hover){
+    visibility: hidden;
+}
+
+.alternative-image{
+    visibility: hidden;
+}
+*/
+
 
 .favourite-popup,
 .discount-percent,
